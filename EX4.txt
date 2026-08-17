@@ -1,0 +1,761 @@
+INDEX.HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>JOB PORTAL</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#e8f4fc;
+}
+header{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+}
+header h1{
+margin:0;
+font-size:40px;
+font-weight:bold;
+letter-spacing:2px;
+}
+nav{
+background:#0059b3;
+padding:15px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+margin:20px;
+padding:10px 20px;
+background:#0073e6;
+border-radius:5px;
+}
+nav a:hover{
+background:orange;
+color:black;
+}
+.container{
+width:90%;
+margin:auto;
+padding:20px;
+text-align:center;
+}
+.jobimg{
+width:180px;
+height:180px;
+border-radius:10px;
+border:2px solid navy;
+}
+.about{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+font-size:18px;
+line-height:30px;
+text-align:justify;
+}
+.cards{
+display:flex;
+justify-content:space-around;
+margin-top:30px;
+flex-wrap:wrap;
+}
+.card{
+background:white;
+width:250px;
+padding:20px;
+margin:10px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+.card h2{
+color:darkblue;
+}
+footer{
+margin-top:30px;
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+font-size:18px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>JOB PORTAL</h1>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="register.html">Register</a>
+<a href="jobs.html">Job List</a>
+<a href="company.html">Company Details</a>
+</nav>
+<div class="container">
+<img class="jobimg"
+src="https://cdn-icons-png.flaticon.com/512/8915/8915863.png"
+alt="Job Portal">
+<div class="about">
+<h2 align="center">About Job Portal</h2>
+<p>
+A <b>Job Portal</b> is an online platform that connects job seekers with companies looking for talented employees. Users can create their profiles, upload resumes, search for jobs, and apply for suitable positions. Companies can post job vacancies, review applications, and recruit qualified candidates. This portal provides opportunities in Software Development, Web Development, Artificial Intelligence, Data Science, Networking, Cloud Computing and Cyber Security. It helps job seekers find their dream career quickly and enables companies to recruit skilled professionals efficiently.
+</p>
+<p align="center">
+Click the links below to continue.
+</p>
+<p align="center">
+<a href="register.html"><b>Register Here</b></a> |
+<a href="jobs.html"><b>View Job List</b></a> |
+<a href="company.html"><b>Company Details</b></a>
+</p>
+</div>
+<div class="cards">
+<div class="card">
+<h2>1000+</h2>
+<p>Available Jobs</p>
+</div>
+<div class="card">
+<h2>500+</h2>
+<p>Top Companies</p>
+</div>
+<div class="card">
+<h2>5000+</h2>
+<p>Registered Candidates</p>
+</div>
+</div>
+</div>
+<footer>
+&copy; 2026 JOB PORTAL | Find Your Dream Career
+</footer>
+</body>
+</html>
+
+REGISTER.HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Portal Registration</title>
+<style>
+body{
+font-family:Arial;
+background:#dff6ff;
+margin:0;
+}
+h1{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+margin:0;
+}
+nav{
+background:#0059b3;
+padding:15px;
+text-align:center;
+}
+nav a{
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+margin:20px;
+}
+form{
+background:white;
+width:700px;
+margin:30px auto;
+padding:25px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+table{
+width:100%;
+}
+td{
+padding:10px;
+font-size:18px;
+}
+input,select,textarea{
+width:100%;
+padding:8px;
+font-size:16px;
+}
+textarea{
+height:70px;
+}
+.error{
+color:red;
+font-size:14px;
+}
+button{
+background:green;
+color:white;
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+button:hover{
+background:darkgreen;
+}
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+</style>
+<script>
+function validateForm()
+{
+let name=document.getElementById("name").value.trim();
+let father=document.getElementById("father").value.trim();
+let dob=document.getElementById("dob").value;
+let gender=document.querySelector('input[name="gender"]:checked');
+let phone=document.getElementById("phone").value.trim();
+let email=document.getElementById("email").value.trim();
+let address=document.getElementById("address").value.trim();
+let qualification=document.getElementById("qualification").value;
+let skills=document.getElementById("skills").value.trim();
+let experience=document.getElementById("experience").value;
+let username=document.getElementById("username").value.trim();
+let password=document.getElementById("password").value;
+let confirm=document.getElementById("confirm").value;
+let resume=document.getElementById("resume").value;
+document.querySelectorAll(".error").forEach(function(e){
+e.innerHTML="";
+});
+let valid=true;
+if(name==""){
+document.getElementById("ename").innerHTML="Enter Full Name";
+valid=false;
+}
+else if(!/^[A-Za-z ]+$/.test(name)){
+document.getElementById("ename").innerHTML="Name must contain letters only";
+valid=false;
+}
+if(father==""){
+document.getElementById("efather").innerHTML="Enter Father Name";
+valid=false;
+}
+else if(!/^[A-Za-z ]+$/.test(father)){
+document.getElementById("efather").innerHTML="Father Name must contain letters only";
+valid=false;
+}
+if(dob==""){
+document.getElementById("edob").innerHTML="Select Date of Birth";
+valid=false;
+}
+if(gender==null){
+document.getElementById("egender").innerHTML="Select Gender";
+valid=false;
+}
+if(phone==""){
+document.getElementById("ephone").innerHTML="Enter Mobile Number";
+valid=false;
+}
+else if(!/^[0-9]{10}$/.test(phone)){
+document.getElementById("ephone").innerHTML="Mobile Number must contain 10 digits only";
+valid=false;
+}
+if(email==""){
+document.getElementById("eemail").innerHTML="Enter Email";
+valid=false;
+}
+else if(!/^[^\s@]+@[^\s@]+\.com$/.test(email)){
+document.getElementById("eemail").innerHTML="Email must be valid like name@example.com";
+valid=false;
+}
+if(address==""){
+document.getElementById("eaddress").innerHTML="Enter Address";
+valid=false;
+}
+
+if(qualification==""){
+document.getElementById("equalification").innerHTML="Select Qualification";
+valid=false;
+}
+if(skills==""){
+document.getElementById("eskills").innerHTML="Enter Skills";
+valid=false;
+}
+if(experience==""){
+document.getElementById("eexperience").innerHTML="Enter Experience";
+valid=false;
+}
+else if(experience<0 || experience>50){
+document.getElementById("eexperience").innerHTML="Experience must be between 0 and 50 years";
+valid=false;
+}
+if(username==""){
+document.getElementById("eusername").innerHTML="Enter Username";
+valid=false;
+}
+if(password==""){
+document.getElementById("epassword").innerHTML="Enter Password";
+valid=false;
+}
+else if(password.length<6){
+document.getElementById("epassword").innerHTML="Password must be at least 6 characters";
+valid=false;
+}
+if(confirm==""){
+document.getElementById("econfirm").innerHTML="Confirm Password";
+valid=false;
+}
+else if(password!=confirm){
+document.getElementById("econfirm").innerHTML="Password Not Matched";
+valid=false;
+}
+if(resume==""){
+document.getElementById("eresume").innerHTML="Upload Resume";
+valid=false;
+}
+else if(!resume.match(/\.(pdf|doc|docx)$/i)){
+document.getElementById("eresume").innerHTML="Only PDF/DOC/DOCX Allowed";
+valid=false;
+}
+if(valid)
+{
+alert("Registration Successful");
+return true;
+}
+else
+{
+return false;
+}
+}
+</script>
+</head>
+<body>
+<h1>JOB PORTAL REGISTRATION</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="register.html">Register</a>
+<a href="jobs.html">Job List</a>
+<a href="company.html">Company Details</a>
+</nav>
+<form onsubmit="return validateForm()">
+<table>
+<tr>
+<td>Full Name</td>
+<td>
+<input type="text" id="name">
+<div class="error" id="ename"></div>
+</td>
+</tr>
+<tr>
+<td>Father Name</td>
+<td>
+<input type="text" id="father">
+<div class="error" id="efather"></div>
+</td>
+</tr>
+<tr>
+<td>Date of Birth</td>
+<td>
+<input type="date" id="dob">
+<div class="error" id="edob"></div>
+</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender">Male
+<input type="radio" name="gender">Female
+<div class="error" id="egender"></div>
+</td>
+</tr>
+<tr>
+<td>Mobile Number</td>
+<td>
+<input type="text" id="phone">
+<div class="error" id="ephone"></div>
+</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>
+<input type="text" id="email">
+<div class="error" id="eemail"></div>
+</td>
+</tr>
+<tr>
+<td>Address</td>
+<td>
+<textarea id="address"></textarea>
+<div class="error" id="eaddress"></div>
+</td>
+</tr>
+<tr>
+<td>Qualification</td>
+<td>
+<select id="qualification">
+<option value="">Select</option>
+<option>BE</option>
+<option>B.Tech</option>
+<option>B.Sc</option>
+<option>MCA</option>
+<option>ME</option>
+</select>
+<div class="error" id="equalification"></div>
+</td>
+</tr>
+<tr>
+<td>Skills</td>
+<td>
+<input type="text" id="skills">
+<div class="error" id="eskills"></div>
+</td>
+</tr>
+<tr>
+<td>Experience</td>
+<td>
+<input type="number" id="experience">
+<div class="error" id="eexperience"></div>
+</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>
+<input type="text" id="username">
+<div class="error" id="eusername"></div>
+</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>
+<input type="password" id="password">
+<div class="error" id="epassword"></div>
+</td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td>
+<input type="password" id="confirm">
+<div class="error" id="econfirm"></div>
+</td>
+</tr>
+<tr>
+<td>Upload Resume</td>
+<td>
+<input type="file" id="resume">
+<div class="error" id="eresume"></div>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<button type="submit">REGISTER</button>
+</td>
+</tr>
+</table>
+</form>
+<footer>
+&copy; 2026 JOB PORTAL
+</footer>
+</body>
+</html>
+
+JOBS.HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job List</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#eef7ff;
+}
+header{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+}
+header h1{
+margin:0;
+font-size:38px;
+}
+nav{
+background:#0059b3;
+padding:15px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+margin:20px;
+}
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:30px;
+}
+.card{
+width:320px;
+background:white;
+margin:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+text-align:center;
+padding-bottom:20px;
+}
+.card img{
+width:100%;
+height:180px;
+border-radius:10px 10px 0 0;
+}
+.card h2{
+color:#003366;
+}
+.card p{
+font-size:17px;
+}
+button{
+background:#0073e6;
+color:white;
+padding:10px 20px;
+font-size:17px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+button:hover{
+background:green;
+}
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>AVAILABLE JOBS</h1>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="register.html">Register</a>
+<a href="jobs.html">Job List</a>
+<a href="company.html">Company Details</a>
+</nav>
+<div class="container">
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968863.png">
+<h2>Google</h2>
+<p><b>Job:</b> Software Engineer</p>
+<p><b>Location:</b> Bangalore</p>
+<p><b>Salary:</b> ₹18 LPA</p>
+<a href="company.html">
+<button>View Details</button>
+</a>
+</div>
+<div class="card">
+<img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWCZER-Legal-IP-Trademarks-CP-MS-logo-740x417-1?wid=406&hei=230&fit=crop&resSharp=1">
+<h2>Microsoft</h2>
+<p><b>Job:</b> Full Stack Developer</p>
+<p><b>Location:</b> Hyderabad</p>
+<p><b>Salary:</b> ₹16 LPA</p>
+<a href="company.html">
+<button>View Details</button>
+</a>
+</div>
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBO_rqpaWW7j8mJC4jv1_EFyNrUntecq7JjntiO8otn1RPd24UO9-Pri_5&s=10">
+<h2>TCS</h2>
+<p><b>Job:</b> Java Developer</p>
+<p><b>Location:</b> Chennai</p>
+<p><b>Salary:</b> ₹7 LPA</p>
+<a href="company.html">
+<button>View Details</button>
+</a>
+</div>
+<div class="card">
+<img src="https://static.vecteezy.com/system/resources/previews/020/336/451/non_2x/infosys-logo-infosys-icon-free-free-vector.jpg">
+<h2>Infosys</h2>
+<p><b>Job:</b> Python Developer</p>
+<p><b>Location:</b> Pune</p>
+<p><b>Salary:</b> ₹8 LPA</p>
+<a href="company.html">
+<button>View Details</button>
+</a>
+</div>
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy5UKeVDEgBFBm1sMNnaoYLHervjouPBV5o41mB1E4Dw&s=10">
+<h2>Wipro</h2>
+<p><b>Job:</b> Web Developer</p>
+<p><b>Location:</b> Coimbatore</p>
+<p><b>Salary:</b> ₹6 LPA</p>
+<a href="company.html">
+<button>View Details</button>
+</a>
+</div>
+</div>
+<footer>
+&copy; 2026 JOB PORTAL | Find Your Dream Job
+</footer>
+</body>
+</html>
+
+COMPANY.HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Company Details</title>
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#eaf6ff;
+}
+header{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+}
+header h1{
+margin:0;
+font-size:38px;
+}
+nav{
+background:#0059b3;
+padding:15px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:bold;
+margin:20px;
+}
+.container{
+width:90%;
+margin:auto;
+padding:20px;
+}
+.company{
+background:white;
+margin-bottom:30px;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+overflow:hidden;
+}
+.company img{
+width:180px;
+height:180px;
+float:right;
+border-radius:10px;
+margin-left:20px;
+}
+.company h2{
+color:#003366;
+}
+.company p{
+font-size:17px;
+line-height:28px;
+}
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>COMPANY DETAILS</h1>
+</header>
+<nav>
+<a href="index.html">Home</a>
+<a href="register.html">Register</a>
+<a href="jobs.html">Job List</a>
+<a href="company.html">Company Details</a>
+</nav>
+<div class="container">
+<div class="company">
+<img src="https://storage.googleapis.com/gd-prod/images/a910d418-7123-4bc4-aa3b-ef7e25e74ae6.60c498c559810aa0.webp">
+<h2>Google</h2>
+<p><b>Job Role :</b> Software Engineer</p>
+<p><b>Location :</b> Bangalore</p>
+<p><b>Salary :</b> ₹18 LPA</p>
+<p><b>Qualification :</b> B.E / B.Tech / M.Tech (CSE, IT)</p>
+<p><b>Experience :</b> 0-2 Years</p>
+<p><b>Skills :</b> Java, Python, Data Structures, Algorithms, Problem Solving</p>
+<p><b>Selection Process :</b> Online Test → Technical Interview → HR Interview</p>
+</div>
+<div class="company">
+<img src="https://www.logodesignlove.com/wp-content/uploads/2012/08/microsoft-logo-01.jpeg">
+<h2>Microsoft</h2>
+<p><b>Job Role :</b> Full Stack Developer</p>
+<p><b>Location :</b> Hyderabad</p>
+<p><b>Salary :</b> ₹16 LPA</p>
+<p><b>Qualification :</b> B.E / B.Tech</p>
+<p><b>Experience :</b> 1-3 Years</p>
+<p><b>Skills :</b> HTML, CSS, JavaScript, React, Node.js</p>
+<p><b>Selection Process :</b> Coding Test → Technical Interview → HR Interview</p>
+</div>
+<div class="company">
+<img src="https://i.pinimg.com/564x/05/43/29/054329d9f175094c212a2552a6081dff.jpg">
+<h2>TCS</h2>
+<p><b>Job Role :</b> Java Developer</p>
+<p><b>Location :</b> Chennai</p>
+<p><b>Salary :</b> ₹7 LPA</p>
+<p><b>Qualification :</b> B.E / B.Tech / MCA</p>
+<p><b>Experience :</b> Fresher</p>
+<p><b>Skills :</b> Java, SQL, OOP Concepts</p>
+<p><b>Selection Process :</b> Aptitude Test → Technical Interview → HR Interview</p>
+</div>
+<div class="company">
+<img src="https://www.shutterstock.com/image-vector/infosys-indian-software-company-logo-260nw-2342471269.jpg">
+<h2>Infosys</h2>
+<p><b>Job Role :</b> Python Developer</p>
+<p><b>Location :</b> Pune</p>
+<p><b>Salary :</b> ₹8 LPA</p>
+<p><b>Qualification :</b> B.E / B.Tech / MCA</p>
+<p><b>Experience :</b> Fresher</p>
+<p><b>Skills :</b> Python, Django, SQL</p>
+<p><b>Selection Process :</b> Online Test → Technical Interview → HR Interview</p>
+</div>
+<div class="company">
+<img src="https://1000logos.net/wp-content/uploads/2021/05/Wipro-logo.png">
+<h2>Wipro</h2>
+<p><b>Job Role :</b> Web Developer</p>
+<p><b>Location :</b> Coimbatore</p>
+<p><b>Salary :</b> ₹6 LPA</p>
+<p><b>Qualification :</b> B.E / B.Tech / B.Sc</p>
+<p><b>Experience :</b> Fresher</p>
+<p><b>Skills :</b> HTML, CSS, JavaScript, PHP, MySQL</p>
+<p><b>Selection Process :</b> Aptitude Test → Technical Interview → HR Interview</p>
+</div>
+</div>
+<footer>
+&copy; 2026 JOB PORTAL | Company Information
+</footer>
+</body>
+</html>
