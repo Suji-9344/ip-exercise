@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Ticket Reservation System</title>
+</head>
+
+<body>
+
+<h1>Train Reservation System</h1>
+
+<table border="1">
+<tr>
+    <th>Train Name</th>
+    <th>Time</th>
+    <th>Poster</th>
+    <th>No. of Tickets</th>
+</tr>
+
+<tr>
+    <td>Vaigai Express</td>
+    <td>3:00 PM</td>
+    <td>
+        <img src="https://www.shutterstock.com/image-vector/illustration-indian-train-vector-260nw-1768085480.jpg"
+             width="104" height="100">
+        <br>
+        <a href="https://www.google.com/search?q=train+image" target="_blank">Click Here</a>
+    </td>
+    <td>100</td>
+</tr>
+</table>
+
+<br>
+
+<form action="submit.jsp" method="post">
+
+Name:
+<input type="text" name="name"><br><br>
+
+Email:
+<input type="email" name="email"><br><br>
+
+<label><b>Select Source:</b></label><br>
+<input type="radio" name="source" value="Chennai"> Chennai
+<input type="radio" name="source" value="Madurai"> Madurai
+<input type="radio" name="source" value="Trichy"> Trichy
+<br><br>
+<label><b>Select Destination:</b></label><br>
+<input type="radio" name="destination" value="Chennai"> Chennai
+<input type="radio" name="destination" value="Madurai"> Madurai
+<input type="radio" name="destination" value="Trichy"> Trichy
+<br><br>
+
+<label>Date:</label><br>
+<input type="date" name="date"><br><br>
+
+<label>Time:</label><br>
+<input type="time" name="time"><br><br>
+
+<input type="submit" value="Book Ticket">
+
+</form>
+
+<h3>Food Available</h3>
+
+<ul>
+    <li>Pongal - ₹40</li>
+    <li>Idly - ₹20</li>
+    <li>Poori - ₹50</li>
+</ul>
+
+</body>
+</html>=
