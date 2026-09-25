@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',()=>{const b=f.querySelector('button[type="submit"]');if(b&&f.checkValidity()){b.disabled=true;setTimeout(()=>b.disabled=false,1200)}}));});
